@@ -36,7 +36,9 @@ def shorten_url():
         db.session.add(url_entry)
         db.session.commit()
         
-        return jsonify({'short_url': f"http://localhost:5000/{short_url}"})
+        # return jsonify({'short_url': f"http://localhost:5000/{short_url}"})
+        return jsonify({'short_url': f"https://shorturldb.onrender.com/{short_url}"})
+
     
     return jsonify({'error': 'Invalid URL'}), 400
 
